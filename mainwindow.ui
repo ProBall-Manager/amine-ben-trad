@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>805</width>
     <height>600</height>
    </rect>
   </property>
@@ -21,8 +21,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: green;
-</string>
+    <string notr="true">background-color: green;</string>
    </property>
    <widget class="QPushButton" name="pushButton_ajouter">
     <property name="geometry">
@@ -35,6 +34,53 @@
     </property>
     <property name="text">
      <string>ajouter</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+     </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_modifier">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>410</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modifier</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+     </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_supprimer">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>500</y>
+      <width>121</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>suprimer</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+     </string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_name">
@@ -99,45 +145,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:   yellow</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_modifier">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>410</y>
-      <width>93</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>modifier</string>
-    </property>
-    <property name="icon">
-     <iconset theme="document-new"/>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="autoExclusive">
-     <bool>true</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_supprimer">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>500</y>
-      <width>121</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>suprimer</string>
+     <string notr="true">
+      background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 yellow, stop:1 white);
+      border-radius: 10px;
+     </string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -157,18 +168,6 @@
     </property>
     <property name="text">
      <string>ID</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::TextFormat::PlainText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-    <property name="indent">
-     <number>23</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -213,8 +212,8 @@
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>-10</y>
+      <x>470</x>
+      <y>0</y>
       <width>331</width>
       <height>621</height>
      </rect>
@@ -239,7 +238,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>805</width>
      <height>26</height>
     </rect>
    </property>
