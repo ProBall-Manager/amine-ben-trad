@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "connection.h"
 
 Connection::Connection() {}
@@ -15,3 +16,22 @@ bool Connection::createconnect()
 
     return test;
 }
+=======
+#include "connection.h"
+
+Connection::Connection() {}
+
+bool Connection::createconnect()
+{
+    bool test = false;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    db.setDatabaseName("Source_PRojet2A");  // Data source name
+    db.setUserName("proballManager");        // Username
+    db.setPassword("foot123456");            // Password
+
+    if (db.open())
+        test = true;
+
+    return test;
+}
+>>>>>>> e4e7cd8 (first commit)
