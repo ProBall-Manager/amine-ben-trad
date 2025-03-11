@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef CONNECTION_H
 #define CONNECTION_H
 #include <QSqlDatabase>
@@ -13,19 +12,3 @@ public:
 };
 
 #endif // CONNECTION_H
-=======
-#ifndef CONNECTION_H
-#define CONNECTION_H
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QSqlQuery>
-
-class Connection
-{
-public:
-    Connection();
-    bool createconnect();
-};
-
-#endif // CONNECTION_H
->>>>>>> e4e7cd8 (first commit)
