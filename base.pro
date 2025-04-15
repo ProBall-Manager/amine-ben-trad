@@ -1,6 +1,4 @@
-
-QT       += core gui
-QT       += sql
+QT       += core gui widgets sql charts printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,12 +8,16 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
-    stade.cpp
+    stade.cpp \
+    zonemap.cpp
 
 HEADERS += \
     connection.h \
     mainwindow.h \
-    stade.h
+    stade.h \
+    zonemap.h
 
 FORMS += \
     mainwindow.ui
+
+RESOURCES +=

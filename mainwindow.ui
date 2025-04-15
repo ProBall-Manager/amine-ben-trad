@@ -6,165 +6,398 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>805</width>
-    <height>600</height>
+    <width>1362</width>
+    <height>763</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Proball Manager - Stades</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">file:///C:/Users/Amine/Downloads/Futuristic_Smart_Glas_0308213102_texture.blend</string>
+   <string notr="true">
+QWidget {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', 'Arial';
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+QPushButton {
+    background-color: #006400;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    border: 2px solid #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #228B22;
+}
+QPushButton:pressed {
+    background-color: #004d00;
+}
+
+QLineEdit {
+    background-color: #333333;
+    border: 2px solid #009933;
+    border-radius: 5px;
+    padding: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+QTableView {
+    background-color: #2e2e2e;
+    gridline-color: #ffffff;
+    color: #ffffff;
+    selection-background-color: #009933;
+    selection-color: white;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+QTextBrowser {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+QGroupBox {
+    border: 2px solid #009933;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+}
+
+QTextEdit {
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #009933;
+    border-radius: 5px;
+}
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: green;</string>
-   </property>
-   <widget class="QPushButton" name="pushButton_ajouter">
+   <widget class="QLineEdit" name="lineEdit_search">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>500</y>
-      <width>121</width>
-      <height>29</height>
+      <x>360</x>
+      <y>50</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Rechercher un stade...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_search">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>50</y>
+      <width>131</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>ajouter</string>
+     <string>Rechercher</string>
     </property>
-    <property name="styleSheet">
-     <string notr="true">
-      background-color: black;
-      color: white;
-      border-radius: 10px;
-     </string>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ajouter">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>610</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ajouter</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_modifier">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>410</y>
-      <width>93</width>
-      <height>29</height>
+      <x>700</x>
+      <y>500</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>modifier</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-      background-color: black;
-      color: white;
-      border-radius: 10px;
-     </string>
+     <string>Modifier</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_supprimer">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>500</y>
-      <width>121</width>
-      <height>29</height>
+      <x>270</x>
+      <y>610</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>suprimer</string>
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_trier">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>620</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trier</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stats">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>620</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Statistiques</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_pdf">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>620</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-      background-color: black;
-      color: white;
-      border-radius: 10px;
-     </string>
+     <string notr="true">background-color: #800000; color: white;</string>
+    </property>
+    <property name="text">
+     <string>Export PDF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_zones">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>560</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #4B0082; color: white;</string>
+    </property>
+    <property name="text">
+     <string>Zone de Stades</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_name">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>400</y>
-      <width>113</width>
-      <height>26</height>
+      <x>480</x>
+      <y>480</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:yellow;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_location">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>430</y>
-      <width>113</width>
-      <height>26</height>
+      <x>480</x>
+      <y>520</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:yellow;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_capacity">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>460</y>
-      <width>113</width>
-      <height>26</height>
+      <x>480</x>
+      <y>560</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:yellow;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_id">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>370</y>
-      <width>113</width>
-      <height>26</height>
+      <x>480</x>
+      <y>440</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:yellow;</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="tableView2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
+      <x>370</x>
+      <y>110</y>
       <width>411</width>
-      <height>331</height>
+      <height>261</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">
-      background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 yellow, stop:1 white);
-      border-radius: 10px;
-     </string>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #1a1a1a;</string>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::PenStyle::DotLine</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_homologation">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>120</y>
+      <width>361</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Stadium Homologation</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_homologation">
+     <item>
+      <widget class="QPushButton" name="pushButton_verify">
+       <property name="styleSheet">
+        <string notr="true">background-color: #006400; color: white;</string>
+       </property>
+       <property name="text">
+        <string>Verify Homologation</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_homologation_status">
+       <property name="styleSheet">
+        <string notr="true">font-size: 14pt;</string>
+       </property>
+       <property name="text">
+        <string>Status: Not Verified</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit_homologation_details">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_homologation_inputs">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_chairs">
+         <property name="text">
+          <string>Good Chairs:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox_chairs">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100000</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_lights">
+         <property name="text">
+          <string>Working Lights:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spinBox_lights">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>16</number>
+         </property>
+         <property name="value">
+          <number>16</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_staff">
+         <property name="text">
+          <string>Security Staff:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="spinBox_staff">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>370</y>
+      <x>370</x>
+      <y>450</y>
       <width>63</width>
       <height>20</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <underline>true</underline>
-     </font>
     </property>
     <property name="text">
      <string>ID</string>
@@ -173,8 +406,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>400</y>
+      <x>360</x>
+      <y>490</y>
       <width>63</width>
       <height>20</height>
      </rect>
@@ -186,9 +419,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>430</y>
-      <width>111</width>
+      <x>320</x>
+      <y>520</y>
+      <width>141</width>
       <height>21</height>
      </rect>
     </property>
@@ -199,23 +432,23 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>460</y>
+      <x>340</x>
+      <y>560</y>
       <width>101</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>CAPACITE</string>
+     <string>CAPACITÉ</string>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>0</y>
-      <width>331</width>
-      <height>621</height>
+      <x>970</x>
+      <y>20</y>
+      <width>361</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="html">
@@ -225,11 +458,9 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Proball Manager&lt;/span&gt;        &lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Stades&lt;/span&gt;            &lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &lt;img src=&quot;C:\Users\Amine\Pictures\airp\equipe\logo.png&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI','Arial'; font-size:16pt; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Proball Manager &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Stades &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -238,8 +469,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>805</width>
-     <height>26</height>
+     <width>1362</width>
+     <height>33</height>
     </rect>
    </property>
   </widget>
